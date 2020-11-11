@@ -50,6 +50,7 @@ namespace AddressBookTest
                       + "\t\t\t| 8. Search by city or state      |\n"
                       + "\t\t\t| 9. Person count by city ,state  |\n"
                       + "\t\t\t| 10. Sort by name                |\n"
+                      + "\t\t\t| 11. Sort by city,state,zip      |\n"
                       + "\t\t\t| 0.Exit                          |\n"
                       + "\t\t\t|_________________________________|");
                 choice = Convert.ToInt32(Console.ReadLine());
@@ -180,6 +181,25 @@ namespace AddressBookTest
                         break;
                     case 10:
                         addressBook.SortByName();
+                        break;
+                    case 11:
+                        Console.WriteLine("\n1.Sort By City \n2.Sort By State \n3.Sort By Zip");
+                        int ch = Convert.ToInt32(Console.ReadLine());
+                        switch (ch)
+                        {
+                            case 1:
+                                addressBook.SortByCity();
+                                break;
+                            case 2:
+                                addressBook.SortByState();
+                                break;
+                            case 3:
+                                addressBook.SortByZip();
+                                break;
+                            default:
+                                Console.WriteLine("Invalid Choice");
+                                break;
+                        }
                         break;
                     case 0:
                         Console.WriteLine("Thank You For Using Address Book System.");
