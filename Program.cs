@@ -54,6 +54,7 @@ namespace AddressBookTest
                       + "\t\t\t| 11. Sort by city,state,zip      |\n"
                       + "\t\t\t| 12. File I/O Operation          |\n"
                       + "\t\t\t| 13. File I/O Operation using CSV|\n"
+                      + "\t\t\t| 14. File I/O  using json        |\n"
                       + "\t\t\t| 0.Exit                          |\n"
                       + "\t\t\t|_________________________________|");
                 choice = Convert.ToInt32(Console.ReadLine());
@@ -213,6 +214,11 @@ namespace AddressBookTest
                         CSVHandler handler = new CSVHandler();
                         handler.WriteToFile(addressBook.addressBookDictionary);
                         handler.ReadFromFile();
+                        break;
+                    case 14:
+                        JSONFileHandler json = new JSONFileHandler();
+                        json.WriteToFile(addressBook.addressBookDictionary);
+                        json.ReadFromFile();
                         break;
                     case 0:
                         Console.WriteLine("Thank You For Using Address Book System.");
