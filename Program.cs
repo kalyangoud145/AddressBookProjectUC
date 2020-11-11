@@ -49,6 +49,7 @@ namespace AddressBookTest
                       + "\t\t\t| 7. Display address books present|\n"
                       + "\t\t\t| 8. Search by city or state      |\n"
                       + "\t\t\t| 9. Person count by city ,state  |\n"
+                      + "\t\t\t| 10. Sort by name                |\n"
                       + "\t\t\t| 0.Exit                          |\n"
                       + "\t\t\t|_________________________________|");
                 choice = Convert.ToInt32(Console.ReadLine());
@@ -176,6 +177,9 @@ namespace AddressBookTest
                         break;
                     case 9:
                         addressBook.DisplayCountByCityandState();
+                        break;
+                    case 10:
+                        addressBook.SortByName();
                         break;
                     case 0:
                         Console.WriteLine("Thank You For Using Address Book System.");

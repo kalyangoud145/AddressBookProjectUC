@@ -247,6 +247,21 @@ namespace AddressBookTest
             }
         }
         /// <summary>
+        /// Method for sorting persons by first name
+        /// </summary>
+        public void SortByName()
+        {
+            foreach (AddressBook addressBookobj in addressBookDictionary.Values)
+            {
+                List<string> list = addressBookobj.addressBook.Keys.ToList();
+                list.Sort();
+                foreach (string name in list)
+                {
+                    Console.WriteLine(addressBookobj.addressBook[name].ToString());
+                }
+            }
+        }
+        /// <summary>
         /// Searches the state of the person by.
         /// </summary>
         /// <param name="state">The state.</param>
