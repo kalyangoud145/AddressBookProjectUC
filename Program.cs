@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AddressBookProjectUC;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -51,6 +52,7 @@ namespace AddressBookTest
                       + "\t\t\t| 9. Person count by city ,state  |\n"
                       + "\t\t\t| 10. Sort by name                |\n"
                       + "\t\t\t| 11. Sort by city,state,zip      |\n"
+                      + "\t\t\t| 12. File I/O Operation          |\n"
                       + "\t\t\t| 0.Exit                          |\n"
                       + "\t\t\t|_________________________________|");
                 choice = Convert.ToInt32(Console.ReadLine());
@@ -200,6 +202,11 @@ namespace AddressBookTest
                                 Console.WriteLine("Invalid Choice");
                                 break;
                         }
+                        break;
+                    case 12:
+                        FileIOOperations fileIO = new FileIOOperations();
+                        fileIO.WriteToFile(addressBook.addressBookDictionary);
+                        fileIO.ReadFromFile();
                         break;
                     case 0:
                         Console.WriteLine("Thank You For Using Address Book System.");
