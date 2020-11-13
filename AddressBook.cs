@@ -47,7 +47,7 @@ namespace AddressBookTest
                 Zip = zip,
                 PhoneNumber = phoneNumber
             };
-            addressBookDictionary[bookName].addressBook.Add(contact.FirstName , contact);
+            addressBookDictionary[bookName].addressBook.Add(contact.FirstName+" "+contact.LastName , contact);
             Console.WriteLine("\nAdded Succesfully. \n");
         }
         /// <summary>
